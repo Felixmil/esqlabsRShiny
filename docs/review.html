@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>esqLABSRShiny - About</title>
+<title>esqLABSRShiny - Review</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -146,10 +146,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link" href="./index.html">Home</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./context.qm">01 - Context</a>
+    <a class="nav-link" href="./scope.html">1. Scope</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">About</a>
+    <a class="nav-link" href="./test.html">2. Package Test</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./review.html" aria-current="page">3. Review</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposals.html">4. Proposals</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./roadmap.html">5. RoadMap</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -162,14 +174,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#data-model" id="toc-data-model" class="nav-link" data-scroll-target="#data-model">Data Model</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Review</h1>
 </div>
 
 
@@ -183,15 +204,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>About this site</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<section id="data-model" class="level3">
+<h3 class="anchored" data-anchor-id="data-model">Data Model</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ApplicationParameters <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"_data/TestProject/Parameters/ApplicationParameters.xlsx"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>IndividualParameters <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"_data/TestProject/Parameters/IndividualParameters.xlsx"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>IndividualPhysiology <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"_data/TestProject/Parameters/IndividualPhysiology.xlsx"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ModelParameters <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"_data/TestProject/Parameters/ModelParameters.xlsx"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>PopulationParameters <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"_data/TestProject/Parameters/PopulationParameters.xlsx"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Scenarios <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"_data/TestProject/Parameters/Scenarios.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ApplicationParameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code># A tibble: 1 × 4
+  `Container Path`                                           Param…¹ Value Units
+  &lt;chr&gt;                                                      &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;
+1 Applications|IV 250mg 10min|Application_1|ProtocolSchemaI… Dose      250 mg   
+# … with abbreviated variable name ¹​`Parameter Name`</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>IndividualParameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 4
+  `Container Path` `Parameter Name` Value Units 
+  &lt;chr&gt;            &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt; 
+1 Organism|Kidney  GFR                 90 ml/min</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>IndividualPhysiology</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 7
+  IndividualId Species Population         Gender `Weight [kg]` Height …¹ Age […²
+  &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;              &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 Indiv1       Human   European_ICRP_2002 MALE              73       176      30
+# … with abbreviated variable names ¹​`Height [cm]`, ²​`Age [year(s)]`</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ModelParameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 4
+  `Container Path` `Parameter Name`        Value Units
+  &lt;chr&gt;            &lt;chr&gt;                   &lt;dbl&gt; &lt;lgl&gt;
+1 Organism|Liver   EHC continuous fraction     1 NA   </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>PopulationParameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 16
+  PopulationName species popul…¹ numbe…² propo…³ weigh…⁴ weigh…⁵ weigh…⁶ heigh…⁷
+  &lt;chr&gt;          &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;lgl&gt;   &lt;lgl&gt;   &lt;chr&gt;   &lt;lgl&gt;  
+1 TestPopulation Human   Europe…    1000       0 NA      NA      kg      NA     
+# … with 7 more variables: heightMax &lt;lgl&gt;, heightUnit &lt;chr&gt;, ageMin &lt;dbl&gt;,
+#   ageMax &lt;dbl&gt;, BMIMin &lt;lgl&gt;, BMIMax &lt;lgl&gt;, BMIUnit &lt;chr&gt;, and abbreviated
+#   variable names ¹​population, ²​numberOfIndividuals, ³​proportionOfFemales,
+#   ⁴​weightMin, ⁵​weightMax, ⁶​weightUnit, ⁷​heightMin</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Scenarios</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 8
+  Scenario_name IndividualId ModelPara…¹ Appli…² Simul…³ Simul…⁴ Stead…⁵ Model…⁶
+  &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;chr&gt;  
+1 TestScenario  Indiv1       Global      Aciclo…      24 h       FALSE   Aciclo…
+2 TestScenario2 Indiv        Global      Aciclo…      12 h       TRUE    Aciclo…
+# … with abbreviated variable names ¹​ModelParameterSheets,
+#   ²​ApplicationProtocol, ³​SimulationTime, ⁴​SimulationTimeUnit, ⁵​SteadyState,
+#   ⁶​ModelFile</code></pre>
 </div>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

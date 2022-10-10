@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>esqLABSRShiny - Proposals</title>
+<title>esqLABSRShiny - Scope</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html">Home</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./scope.html">1. Scope</a>
+    <a class="nav-link active" href="./scope.html" aria-current="page">1. Scope</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./test.html">2. Package Test</a>
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./review.html">3. Review</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./proposals.html" aria-current="page">4. Proposals</a>
+    <a class="nav-link" href="./proposals.html">4. Proposals</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./roadmap.html">5. RoadMap</a>
@@ -116,6 +116,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#inputs" id="toc-inputs" class="nav-link" data-scroll-target="#inputs">Inputs</a></li>
+  <li><a href="#goal" id="toc-goal" class="nav-link" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#study-methodology" id="toc-study-methodology" class="nav-link" data-scroll-target="#study-methodology">Study Methodology</a></li>
   </ul>
 </nav>
     </div>
@@ -124,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proposals</h1>
+<h1 class="title">Scope</h1>
 </div>
 
 
@@ -140,6 +143,34 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
+</section>
+<section id="inputs" class="level2">
+<h2 class="anchored" data-anchor-id="inputs">Inputs</h2>
+<blockquote class="blockquote">
+<p>We are developing an R package (esqlabsR,<a href="https://github.com/esqLABS/esqlabsR">https://github.com/esqLABS/esqlabsR</a>) that facilitates our modeling and simulation activities. The package provides a workflow for setting up different simulation scenarios in excel files, which is described in an article from the package documentation: <a href="https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html">https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html</a>.</p>
+<p>We would be happy to discuss a design proposal for an app that could facilitate setting up such simulation scenarios and make it less error prone. Feel free to make any proposals of how this workflow can be improved. I understand that you might not have the required background experience with our type of work or the respective packages, so feel free to set up a list of questions that you as an app designer require to have answered to implement such an app.</p>
+<p>We do not expect any code, but rather how you would design such an app, what features would you implement, how do you think this workflow can be improved. The package repository provides an exemplary modeling&amp;simulation project folder (<a href="https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject">https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject</a>) with all files required to execute examples from the article.</p>
+</blockquote>
+</section>
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<p>Based on Customer Inputs, the proposals made at the end of this study should answer these questions:</p>
+<ul>
+<li>What are the features an app should contain to facilitate the use of the esqlabsR package ?</li>
+<li>What is the User Experience the app should be designed around ?</li>
+<li>What is the User Interface the app should have in order to guide the User Experience ?</li>
+<li>How the esqlabsR can be improved for easier use with or withou an application.</li>
+</ul>
+</section>
+<section id="study-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="study-methodology">Study Methodology</h2>
+<ol type="1">
+<li>Review of the current esqlabsR package: The package will be installed and test scenarios run.</li>
+<li>Based on this experience, an in depth analysis will be carried out on the package design and its “api”.</li>
+</ol>
+<ul>
+<li>How to improve current workflow for using esqlabsR ?</li>
+</ul>
 
 
 </section>
