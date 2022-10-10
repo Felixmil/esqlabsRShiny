@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "esqLABSRShiny"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: scope.qmd
+        text: 1. Scope
+      - href: test.qmd
+        text: 2. Package Test
+      - href: review.qmd
+        text: 3. Review
+      - href: proposals.qmd
+        text: 4. Proposals
+      - href: roadmap.qmd
+        text: 5. RoadMap
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

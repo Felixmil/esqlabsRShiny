@@ -1,0 +1,29 @@
+---
+title: "Scope"
+---
+
+
+## Summary
+
+## Inputs
+
+> We are developing an R package (esqlabsR,[https://github.com/esqLABS/esqlabsR](https://github.com/esqLABS/esqlabsR)) that facilitates our modeling and simulation activities. The package provides a workflow for setting up different simulation scenarios in excel files, which is described in an article from the package documentation: [https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html](https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html). 
+>
+>We would be happy to discuss a design proposal for an app that could facilitate setting up such simulation scenarios and make it less error prone. Feel free to make any proposals of how this workflow can be improved. I understand that you might not have the required background experience with our type of work or the respective packages, so feel free to set up a list of questions that you as an app designer require to have answered to implement such an app.
+>
+>We do not expect any code, but rather how you would design such an app, what features would you implement, how do you think this workflow can be improved. The package repository provides an exemplary modeling&simulation project folder ([https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject](https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject)) with all files required to execute examples from the article.
+
+## Goal
+
+Based on Customer Inputs, the proposals made at the end of this study should answer these questions:
+
+- What are the features an app should contain to facilitate the use of the esqlabsR package ?
+- What is the User Experience the app should be designed around ?
+- What is the User Interface the app should have in order to guide the User Experience ?
+- How the esqlabsR can be improved for easier use with or withou an application.
+
+## Study Methodology
+
+1. Review of the current esqlabsR package: The package will be installed and test scenarios run.
+2. Based on this experience, an in depth analysis will be carried out on the package design and its "api".
+- How to improve current workflow for using esqlabsR ?

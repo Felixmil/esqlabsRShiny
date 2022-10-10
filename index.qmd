@@ -1,0 +1,23 @@
+---
+page-title: "esqLABSRShiny"
+---
+
+
+# Summary
+
+
+# Introduction
+
+This study was carried in the context of a recruitment process at esqLABS. 
+The goal is to make a design proposal that should make the use of the [{esqlabR}](https://github.com/esqLABS/esqlabsR) package easier and streamlined.
+the esqlabR packages allow its user to model and simulate many drug effect and properties based on user's define scenarios.
+These scenarios are parameterized through pre-formated excel files.
+
+# Material & Methods
+
+# Results
+
+# Discussion
+
+
+# Context
