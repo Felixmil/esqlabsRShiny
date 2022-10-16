@@ -1,0 +1,127 @@
+---
+title: "Visualisation & Reporting Review"
+execute: 
+  warning: false
+---
+
+
+
+
+:::{.callout-note} 
+
+## A flexible but automation-lacking reporting method
+
+While the plot are probably the most effective way to output simulation results, there should be more context and details available.
+
+In fact there is no real "reporting", except if the user digs into the R object structure.
+
+
+:::
+
+This is a run of the [visualisation workflow](https://esqlabs.github.io/esqlabsR/articles/visualization-and-reporting.html)
+
+# Simulation initialisation
+
+```{r}
+library(esqlabsR)
+# Create a project configuration
+projectConfiguration <- createDefaultProjectConfiguration(path = "_data/TestProject/Code/ProjectConfiguration.xlsx")
+
+# Replace variables to match my project structure
+projectConfiguration$dataFolder <- "_data/TestProject/Data/"
+projectConfiguration$modelFolder <- "_data/TestProject/Models/Simulations/"
+projectConfiguration$paramsFolder <- "_data/TestProject/Parameters/"
+projectConfiguration$outputFolder <- "_data/TestProject/Outputs/"
+
+print(projectConfiguration)
+# Create `ScenarioConfiguration` objects from excel files
+scenarioConfigurations <- readScenarioConfigurationFromExcel(
+  scenarioNames = "TestScenario",
+  projectConfiguration = projectConfiguration
+)
+# Run scenario configuration
+simulatedScenarios <- runScenarios(
+  scenarioConfigurations = scenarioConfigurations,
+  customParams = NULL, saveSimulationsToPKML = FALSE
+)
+
+# Load observed data
+dataSheets <- "Laskin 1982.Group A"
+observedData <- loadObservedData(projectConfiguration = projectConfiguration, sheets = dataSheets)
+```
+
+# Combined Data creation
+
+```{r}
+dataCombined <- DataCombined$new()
+dataCombined$addDataSets(observedData, names = "Observed", groups = "Aciclovir")
+dataCombined$addSimulationResults(simulatedScenarios$TestScenario$results,
+                                  names = "Simulated",
+                                  groups = "Aciclovir"
+)
+```
+
+
+# Plot Configuration
+
+```{r}
+plotConfig <- createEsqlabsPlotConfiguration()
+gridConfig <- createEsqlabsPlotGridConfiguration()
+exportConfig <- createEsqlabsExportConfiguration(projectConfiguration)
+```
+
+# Plot Generation
+
+
+::: {.column-margin}
+:::{.callout-important}
+Could not use these functions, they seem to not exist anymore in the package `ospsuite`
+:::
+:::
+
+```{r, error = TRUE, results='hide'}
+plotConfig$title <- "Time profile"
+indivPlot <- plotIndividualTimeProfile(dataCombined, defaultPlotConfiguration = plotConfig)
+
+plotConfig$title <- "Observed-vs-simulated"
+obsVsSimPlot <- plotObservedVsSimulated(dataCombined, defaultPlotConfiguration = plotConfig)
+
+plotConfig$title <- "Res-vs-time"
+resVsTimePlot <- plotResidualsVsTime(dataCombined, defaultPlotConfiguration = plotConfig)
+
+plotConfig$title <- "Res-vs-simulated"
+resVsSimPlot <- plotResidualsVsSimulated(dataCombined, defaultPlotConfiguration = plotConfig)
+
+gridConfig$addPlots(list(indivPlot, obsVsSimPlot, resVsTimePlot, resVsSimPlot))
+gridConfig$title <- "All aciclovir plots"
+gridPlot <- plotGrid(gridConfig)
+gridPlot
+```
+
+
+
+Outputs should look like this:
+
+![](https://esqlabs.github.io/esqlabsR/articles/visualization-and-reporting_files/figure-html/plot-time-profile-1.png)
+
+Using output dataframe instead
+
+```{r}
+data <- dataCombined$toDataFrame()
+```
+
+```{r}
+library(tidyverse)
+
+ggplot() +
+  geom_point(data = 
+               data %>% filter(dataType == "observed") %>%
+               mutate(xValues = xValues*60,
+                      yValues = yValues*1000/molWeight),
+             aes(x=xValues, y=yValues, color = dataType)) +
+  geom_line(data = data %>% 
+              filter(dataType == "simulated"),
+            aes(x=xValues, y=yValues, color = dataType))+
+labs(x = "Time [min]",
+     y = "Concentration [µmol]")
+```

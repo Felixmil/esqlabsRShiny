@@ -1,0 +1,130 @@
+---
+title: "User Experience Review"
+execute: 
+  warning: false
+  cache: true
+---
+
+
+:::{.callout-note} 
+
+## The Standard Workflow was successfully ran.
+
+The workflow is pretty straightforward.
+
+
+This test run was useful to identify two things:
+
+- Designing a simulation is mostly setting **parameters** (here through excel files),
+- One of the expected result output for the user is graphical: here, a curve showing concentration over time,
+
+**Questions**:
+
+- except the simulation settings, what are the parameters/files that a user may need to change ?
+- what kind of compound can be simulated ?
+- what are the main biological factors that will impact the compound half-life ?
+:::
+
+
+This is a run of the [Standard Workflow](https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html)
+
+
+## Package Import
+
+```{r}
+library(esqlabsR)
+```
+
+
+##  Project Configuration
+
+:::{.callout-note}
+Downloaded the whole esqlabsR package and put the `tests/data/TestProject/` files in `_data/TestProject/`
+:::
+
+
+:::{.column-margin}
+:::{.callout-tip}
+These parameters could be depend on a "root" directory. for example:
+
+```r
+projConf$root_dir <- "_data/TestProject"
+projConf$dataFolder  <-  paste0(projConf$root_dir, "Data/")
+
+```
+:::
+:::
+```{r}
+projectConfiguration <- createDefaultProjectConfiguration(path = "_data/TestProject/Code/ProjectConfiguration.xlsx")
+
+# Replace variables to match my project structure
+projectConfiguration$dataFolder <- "_data/TestProject/Data/"
+projectConfiguration$modelFolder <- "_data/TestProject/Models/Simulations/"
+projectConfiguration$paramsFolder <- "_data/TestProject/Parameters/"
+projectConfiguration$outputFolder <- "_data/TestProject/Outputs/"
+
+print(projectConfiguration)
+```
+
+
+
+
+##  Load predefined simulation
+
+
+```{r}
+scenarioConfigurations <- readScenarioConfigurationFromExcel(
+  scenarioNames = "TestScenario",
+  projectConfiguration = projectConfiguration)
+
+print(scenarioConfigurations$TestScenario)
+```
+
+## Run simulation
+
+
+```{r, error = TRUE, cache=T}
+simulatedScenarios <- runScenarios(
+  scenarioConfigurations = scenarioConfigurations,
+  customParams = NULL, 
+  saveSimulationsToPKML = FALSE
+)
+```
+
+::: {.column-margin}
+:::{.callout-warning}
+got this error:
+
+> Error in initPKSim() : 
+> Could not find an installation of PK-Sim on the machine.
+
+After installing [`OSPSuite-Full.11.0.139.exe`](https://github.com/Open-Systems-Pharmacology/Suite/releases/tag/v11.0) the code successfull ran.
+
+:::
+:::
+
+## What are the results of the simulation ?
+
+```{r}
+simulatedScenarios$TestScenario
+```
+The output of the simulation contains:
+
+- The simulations parameters
+- The results which seems to be blood concentration over time for this example.
+
+
+##  Import `ObservedData`
+
+```{r}
+dataSheets <- "Laskin 1982.Group A"
+observedData <- loadObservedData(
+  projectConfiguration = projectConfiguration,
+  sheets = dataSheets
+)
+
+print(names(observedData))
+```
+
+
+

@@ -1,23 +1,63 @@
 ---
 page-title: "esqLABSRShiny"
+sidebar: false
 ---
 
 
 # Summary
-
-
-# Introduction
-
 This study was carried in the context of a recruitment process at esqLABS. 
 The goal is to make a design proposal that should make the use of the [{esqlabR}](https://github.com/esqLABS/esqlabsR) package easier and streamlined.
 the esqlabR packages allow its user to model and simulate many drug effect and properties based on user's define scenarios.
 These scenarios are parameterized through pre-formated excel files.
 
-# Material & Methods
+# Introduction
+
+## "Customer" Inputs
+
+> We are developing an R package (esqlabsR,[https://github.com/esqLABS/esqlabsR](https://github.com/esqLABS/esqlabsR)) that facilitates our modeling and simulation activities. The package provides a workflow for setting up different simulation scenarios in excel files, which is described in an article from the package documentation: [https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html](https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html). 
+>
+>We would be happy to discuss a design proposal for an app that could facilitate setting up such simulation scenarios and make it less error prone. Feel free to make any proposals of how this workflow can be improved. I understand that you might not have the required background experience with our type of work or the respective packages, so feel free to set up a list of questions that you as an app designer require to have answered to implement such an app.
+>
+>We do not expect any code, but rather how you would design such an app, what features would you implement, how do you think this workflow can be improved. The package repository provides an exemplary modeling&simulation project folder ([https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject](https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject)) with all files required to execute examples from the article.
+
+
+## Goals
+
+Based on Customer Inputs, the proposals made at the end of this study should answer these questions:
+
+- What are the features an app should contain to facilitate the use of the esqlabsR package ?
+- What is the User Experience the app should be designed around ?
+- What is the User Interface the app should have in order to guide the User Experience ?
+- How the esqlabsR can be improved for easier use with or withou an application.
+- How to improve current workflow for using esqlabsR ?
+
+# Method
+
+## Package Test
+First, the package will be tested with a user point of view. Accordingly, the following aspects will be tested:
+
+- Package installation,
+- Package usage,
+
+## Package Review
+Based on this experience, an in depth analysis will be carried out on:
+- user experience,
+- data model
+
 
 # Results
 
-# Discussion
+As result, many proposals could be made on the following aspects:
+
+- Inputs verification and storage,
+- User Experience and Interface,
+- Output
+- Infrastructure and Environment
 
 
-# Context
+These proposals were ordered on a roadmap that aims to reach the goals by implementing these proposals in an incremental and flexible way.
+
+
+
+
+

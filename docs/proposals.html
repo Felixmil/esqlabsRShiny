@@ -80,25 +80,13 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./review.html">Package Review</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./scope.html">1. Scope</a>
+    <a class="nav-link active" href="./proposals.html" aria-current="page">Proposals</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./test.html">2. Package Test</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./review.html">3. Review</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./proposals.html" aria-current="page">4. Proposals</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./roadmap.html">5. RoadMap</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="./roadmap.html">Roadmap</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -115,7 +103,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#improve-the-excel-files-framework" id="toc-improve-the-excel-files-framework" class="nav-link active" data-scroll-target="#improve-the-excel-files-framework">Improve the Excel Files Framework</a></li>
+  <li><a href="#secure-and-ease-the-parameterizing-process-using-a-shiny-app" id="toc-secure-and-ease-the-parameterizing-process-using-a-shiny-app" class="nav-link" data-scroll-target="#secure-and-ease-the-parameterizing-process-using-a-shiny-app">Secure and ease the parameterizing process using a shiny app</a></li>
+  <li><a href="#improve-and-automate-reporting-with-rmarkdown" id="toc-improve-and-automate-reporting-with-rmarkdown" class="nav-link" data-scroll-target="#improve-and-automate-reporting-with-rmarkdown">Improve and automate reporting with Rmarkdown</a></li>
+  <li><a href="#setup-a-shareduser-sql-database-for-parameters" id="toc-setup-a-shareduser-sql-database-for-parameters" class="nav-link" data-scroll-target="#setup-a-shareduser-sql-database-for-parameters">Setup a shared/user sql database for parameters</a></li>
+  <li><a href="#streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app" id="toc-streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app" class="nav-link" data-scroll-target="#streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app">Streamline the whole process by integrating all these in a server hoster shiny app</a></li>
+  <li><a href="#secure-a-production-grade-environment-with-a-centralized-server" id="toc-secure-a-production-grade-environment-with-a-centralized-server" class="nav-link" data-scroll-target="#secure-a-production-grade-environment-with-a-centralized-server">Secure a production-grade environment with a centralized server</a></li>
+  <li><a href="#bonus-host-already-existing-esqlabs-shinyapps-on-a-server" id="toc-bonus-host-already-existing-esqlabs-shinyapps-on-a-server" class="nav-link" data-scroll-target="#bonus-host-already-existing-esqlabs-shinyapps-on-a-server">Bonus: host already existing esqlabs shinyapps on a server</a></li>
   </ul>
 </nav>
     </div>
@@ -138,8 +132,52 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Here are the proposals to solve the weaknesses identified and improve the overhaul quality of the work done with the esqlabs package. In the end all these proposal aims to <strong>reduce frictions</strong> (thus <strong>increase productivity</strong>) and <strong>increase quality</strong> (and <strong>customer satisfaction</strong>).</p>
+<section id="improve-the-excel-files-framework" class="level2">
+<h2 class="anchored" data-anchor-id="improve-the-excel-files-framework">Improve the Excel Files Framework</h2>
+<p>The excel base framework could be improved drastically with few minor changes:</p>
+<ul>
+<li>One excel file with many tabs,</li>
+<li>Crossed data validation between datasets,</li>
+<li>Work with data keys/values instead of plain text</li>
+</ul>
+</section>
+<section id="secure-and-ease-the-parameterizing-process-using-a-shiny-app" class="level2">
+<h2 class="anchored" data-anchor-id="secure-and-ease-the-parameterizing-process-using-a-shiny-app">Secure and ease the parameterizing process using a shiny app</h2>
+<p>A simple yet modern “tab” based shiny app can drastically reduce input errors and improve user experience:</p>
+<ul>
+<li>Pre filled fields and SelectInputs</li>
+<li>Data cross validation</li>
+<li>Field validation</li>
+<li>Simulation settings summary dashboard</li>
+</ul>
+<p>I would use the <a href="https://github.com/RinteRface/bs4Dash"><code>bs4Dash</code></a> package for all the UI: easy to use, modern, well supported and extensible.</p>
+</section>
+<section id="improve-and-automate-reporting-with-rmarkdown" class="level2">
+<h2 class="anchored" data-anchor-id="improve-and-automate-reporting-with-rmarkdown">Improve and automate reporting with Rmarkdown</h2>
+<p>Rmarkdown files <a href="https://rmarkdown.rstudio.com/lesson-6.html">can take parameters as inputs</a> and execute code based on these parameters.</p>
+<p><strong>One</strong> well designed Rmarkdown template could be sufficient to generate all kind of reports, personnalized base on settings the user chose.</p>
+</section>
+<section id="setup-a-shareduser-sql-database-for-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="setup-a-shareduser-sql-database-for-parameters">Setup a shared/user sql database for parameters</h2>
+<p>If some values are often duplicated across esqlabs users environments: A central database gathering all the “typical” simulation settings can improve repeatability and increase collaboration between users.</p>
+</section>
+<section id="streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app" class="level2">
+<h2 class="anchored" data-anchor-id="streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app">Streamline the whole process by integrating all these in a server hoster shiny app</h2>
+<p>The future esqlabsR shiny could integrate both:</p>
+<ul>
+<li>Parameterizing process,</li>
+<li>Interact and maintain the central database through a CRUD interface,</li>
+<li>Rmarkdown generation (download a <code>.pdf</code> or self contained interactive <code>.html</code> file)</li>
+</ul>
+</section>
+<section id="secure-a-production-grade-environment-with-a-centralized-server" class="level2">
+<h2 class="anchored" data-anchor-id="secure-a-production-grade-environment-with-a-centralized-server">Secure a production-grade environment with a centralized server</h2>
+<p>To boost reproductibility and repeatability and reach greater quality and security standards, a production environment can be setup, maintained and made available to all users from one central shiny server.</p>
+</section>
+<section id="bonus-host-already-existing-esqlabs-shinyapps-on-a-server" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-host-already-existing-esqlabs-shinyapps-on-a-server">Bonus: host already existing esqlabs shinyapps on a server</h2>
+<p>A shiny server could host many other shiny apps than the proposed esqlabsR App.</p>
 
 
 </section>

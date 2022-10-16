@@ -1,5 +1,58 @@
 ---
 title: "Proposals"
+sidebar: false
 ---
 
-## Summary
+
+Here are the proposals to solve the weaknesses identified and improve the overhaul quality of the work done with the esqlabs package.
+In the end all these proposal aims to **reduce frictions** (thus **increase productivity**) and **increase quality** (and **customer satisfaction**).
+
+## Improve the Excel Files Framework
+
+The excel base framework could be improved drastically with few minor changes:
+
+- One excel file with many tabs,
+- Crossed data validation between datasets,
+- Work with data keys/values instead of plain text 
+
+
+
+## Secure and ease the parameterizing process using a shiny app
+
+A simple yet modern "tab" based shiny app can drastically reduce input errors and improve user experience:
+
+- Pre filled fields and SelectInputs
+- Data cross validation
+- Field validation
+- Simulation settings summary dashboard
+
+I would use the [`bs4Dash`](https://github.com/RinteRface/bs4Dash) package for all the UI: easy to use, modern, well supported and extensible.
+
+## Improve and automate reporting with Rmarkdown
+
+Rmarkdown files [can take parameters as inputs](https://rmarkdown.rstudio.com/lesson-6.html) and execute code based on these parameters.
+
+**One** well designed Rmarkdown template could be sufficient to generate all kind of reports, personnalized base on settings the user chose.
+
+## Setup a shared/user sql database for parameters
+
+If some values are often duplicated across esqlabs users environments: A central database gathering all the "typical" simulation settings can improve repeatability and increase collaboration between users.
+
+
+## Streamline the whole process by integrating all these in a server hoster shiny app
+
+The future esqlabsR shiny could integrate both:
+
+- Parameterizing process,
+- Interact and maintain the central database through a CRUD interface,
+- Rmarkdown generation (download a `.pdf` or self contained interactive `.html` file)
+
+
+## Secure a production-grade environment with a centralized server
+
+To boost reproductibility and repeatability and reach greater quality and security standards, a production environment can be setup, maintained and made available to all users from one central shiny server.
+
+## Bonus: host already existing esqlabs shinyapps on a server
+
+A shiny server could host many other shiny apps than the proposed esqlabsR App.
+

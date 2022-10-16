@@ -1,0 +1,70 @@
+---
+title: "Model Settings Review"
+execute: 
+  warning: false
+
+df-print: kable
+
+echo: false
+---
+
+
+:::{.callout-note} 
+
+## Model setting trough excel will lead to errors
+
+The excel files are well structured but may be error prone:
+
+- Many different excel files must be opened at the same time,
+- There are a lot of plain text repetition in the files,
+- There is no crossed data validation between excel files (I can launch a simulation on `Indvi3` instead of `Indiv3`, the source of the problem can be long to find).
+- Each user have its own Excel files in its environment. As they can be hard to "merge", reproducibility is hard to achieve,
+- Excel files are badly versionned, thus are lowering the simulations repeatability over time.
+
+:::
+
+
+```{r,echo=FALSE}
+library(readxl)
+
+ApplicationParameters <- read_xlsx("_data/TestProject/Parameters/ApplicationParameters.xlsx")
+IndividualParameters <- read_xlsx("_data/TestProject/Parameters/IndividualParameters.xlsx")
+IndividualPhysiology <- read_xlsx("_data/TestProject/Parameters/IndividualPhysiology.xlsx")
+ModelParameters <- read_xlsx("_data/TestProject/Parameters/ModelParameters.xlsx")
+PopulationParameters <- read_xlsx("_data/TestProject/Parameters/PopulationParameters.xlsx")
+Scenarios <- read_xlsx("_data/TestProject/Parameters/Scenarios.xlsx")
+```
+
+## Excel files
+
+
+### Scenarios
+```{r}
+Scenarios
+```
+
+
+### ApplicationParameters
+```{r}
+ApplicationParameters
+```
+
+### IndividualParameters
+```{r}
+IndividualParameters
+```
+
+### IndividualPhysiology
+```{r}
+IndividualPhysiology
+```
+
+### ModelParameters
+```{r}
+ModelParameters
+```
+
+### PopulationParameters
+```{r}
+PopulationParameters
+```

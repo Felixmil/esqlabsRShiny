@@ -80,25 +80,10 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+    <a class="nav-link" href="./review.html">Package Review</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./scope.html">1. Scope</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./test.html">2. Package Test</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./review.html">3. Review</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./proposals.html">4. Proposals</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./roadmap.html">5. RoadMap</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="./proposals.html">Proposals</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -116,11 +101,17 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#material-methods" id="toc-material-methods" class="nav-link" data-scroll-target="#material-methods">Material &amp; Methods</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#customer-inputs" id="toc-customer-inputs" class="nav-link" data-scroll-target="#customer-inputs">“Customer” Inputs</a></li>
+  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
+  </ul></li>
+  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method">Method</a>
+  <ul class="collapse">
+  <li><a href="#package-test" id="toc-package-test" class="nav-link" data-scroll-target="#package-test">Package Test</a></li>
+  <li><a href="#package-review" id="toc-package-review" class="nav-link" data-scroll-target="#package-review">Package Review</a></li>
+  </ul></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
   </ul>
 </nav>
     </div>
@@ -131,22 +122,55 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level1">
 <h1>Summary</h1>
+<p>This study was carried in the context of a recruitment process at esqLABS. The goal is to make a design proposal that should make the use of the <a href="https://github.com/esqLABS/esqlabsR">{esqlabR}</a> package easier and streamlined. the esqlabR packages allow its user to model and simulate many drug effect and properties based on user’s define scenarios. These scenarios are parameterized through pre-formated excel files.</p>
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>This study was carried in the context of a recruitment process at esqLABS. The goal is to make a design proposal that should make the use of the <a href="https://github.com/esqLABS/esqlabsR">{esqlabR}</a> package easier and streamlined. the esqlabR packages allow its user to model and simulate many drug effect and properties based on user’s define scenarios. These scenarios are parameterized through pre-formated excel files.</p>
+<section id="customer-inputs" class="level2">
+<h2 class="anchored" data-anchor-id="customer-inputs">“Customer” Inputs</h2>
+<blockquote class="blockquote">
+<p>We are developing an R package (esqlabsR,<a href="https://github.com/esqLABS/esqlabsR">https://github.com/esqLABS/esqlabsR</a>) that facilitates our modeling and simulation activities. The package provides a workflow for setting up different simulation scenarios in excel files, which is described in an article from the package documentation: <a href="https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html">https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html</a>.</p>
+<p>We would be happy to discuss a design proposal for an app that could facilitate setting up such simulation scenarios and make it less error prone. Feel free to make any proposals of how this workflow can be improved. I understand that you might not have the required background experience with our type of work or the respective packages, so feel free to set up a list of questions that you as an app designer require to have answered to implement such an app.</p>
+<p>We do not expect any code, but rather how you would design such an app, what features would you implement, how do you think this workflow can be improved. The package repository provides an exemplary modeling&amp;simulation project folder (<a href="https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject">https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject</a>) with all files required to execute examples from the article.</p>
+</blockquote>
 </section>
-<section id="material-methods" class="level1">
-<h1>Material &amp; Methods</h1>
+<section id="goals" class="level2">
+<h2 class="anchored" data-anchor-id="goals">Goals</h2>
+<p>Based on Customer Inputs, the proposals made at the end of this study should answer these questions:</p>
+<ul>
+<li>What are the features an app should contain to facilitate the use of the esqlabsR package ?</li>
+<li>What is the User Experience the app should be designed around ?</li>
+<li>What is the User Interface the app should have in order to guide the User Experience ?</li>
+<li>How the esqlabsR can be improved for easier use with or withou an application.</li>
+<li>How to improve current workflow for using esqlabsR ?</li>
+</ul>
+</section>
+</section>
+<section id="method" class="level1">
+<h1>Method</h1>
+<section id="package-test" class="level2">
+<h2 class="anchored" data-anchor-id="package-test">Package Test</h2>
+<p>First, the package will be tested with a user point of view. Accordingly, the following aspects will be tested:</p>
+<ul>
+<li>Package installation,</li>
+<li>Package usage,</li>
+</ul>
+</section>
+<section id="package-review" class="level2">
+<h2 class="anchored" data-anchor-id="package-review">Package Review</h2>
+<p>Based on this experience, an in depth analysis will be carried out on: - user experience, - data model</p>
+</section>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-</section>
-<section id="discussion" class="level1">
-<h1>Discussion</h1>
-</section>
-<section id="context" class="level1">
-<h1>Context</h1>
+<p>As result, many proposals could be made on the following aspects:</p>
+<ul>
+<li>Inputs verification and storage,</li>
+<li>User Experience and Interface,</li>
+<li>Output</li>
+<li>Infrastructure and Environment</li>
+</ul>
+<p>These proposals were ordered on a roadmap that aims to reach the goals by implementing these proposals in an incremental and flexible way.</p>
 
 
 </section>

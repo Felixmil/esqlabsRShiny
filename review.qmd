@@ -1,41 +1,16 @@
 ---
-title: "Review"
+title: "Package Review Summary"
+execute: 
+  warning: false
 ---
 
-## Summary
+The following aspects were reviewed:
 
-### Data Model
+- Package installation
+- Execution & User Experience
+- Model settings system,
+- Visualization & Reporting
 
-```{r}
-library(readxl)
 
-ApplicationParameters <- read_xlsx("_data/TestProject/Parameters/ApplicationParameters.xlsx")
-IndividualParameters <- read_xlsx("_data/TestProject/Parameters/IndividualParameters.xlsx")
-IndividualPhysiology <- read_xlsx("_data/TestProject/Parameters/IndividualPhysiology.xlsx")
-ModelParameters <- read_xlsx("_data/TestProject/Parameters/ModelParameters.xlsx")
-PopulationParameters <- read_xlsx("_data/TestProject/Parameters/PopulationParameters.xlsx")
-Scenarios <- read_xlsx("_data/TestProject/Parameters/Scenarios.xlsx")
-```
-
-```{r}
-ApplicationParameters
-```
-```{r}
-IndividualParameters
-```
-
-```{r}
-IndividualPhysiology
-```
-```{r}
-ModelParameters
-```
-
-```{r}
-PopulationParameters
-```
-
-```{r}
-Scenarios
-```
-
+Package and dependencies were **successfully installed** even though the process required heterogeneous approaches and there are some "holes" in the documentation.
+The "Standard Worklow" was successfully run
