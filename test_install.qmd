@@ -12,7 +12,14 @@ execute:
 ## The package was successfuly installed
 ... even though it wasn't as easy.
 
-Some packages required to download zips and manually install, some can be installed directly from github. I had the chance to find how to install properly from zipfiles [here](https://github.com/Open-Systems-Pharmacology/OSPSuite-R#under-windows) (It didn't work with `devtools::install_local()` which I usually use). More extensive instructions should be available in the repo's README
+Some packages required to download zips and manually install, some can be installed directly from github. I had the chance to find how to install properly from zipfiles [here](https://github.com/Open-Systems-Pharmacology/OSPSuite-R#under-windows) (It didn't work with `devtools::install_local()` which I usually use). More extensive instructions should be available in the repo's README.
+
+**Questions:**
+
+- Do users in esqlabs have their own installs of RStudio and esqlabsR + dependencies ?
+- Do they often encounters bug or environment misconfigurations when upgrading version ?
+- What are the most common problem when people want to use the package ?
+- Are they users outside of esqlabs ? Who are they ?
 :::
 
 

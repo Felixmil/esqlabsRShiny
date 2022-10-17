@@ -8,15 +8,18 @@ execute:
 
 :::{.callout-note} 
 
-## The Standard Workflow was successfully ran.
+## Easy to use, hard to customise
 
-The workflow is pretty straightforward.
+The workflow is pretty straightforward. I'm surprised I could run such an interesting simulation so easily. 
 
+The simulation parameters and arguments are easily understandable since the functions are domain driven developped. 
 
-This test run was useful to identify two things:
+However, setup a new scenarios with other values is tedious.
 
-- Designing a simulation is mostly setting **parameters** (here through excel files),
-- One of the expected result output for the user is graphical: here, a curve showing concentration over time,
+This review could show what are the User Exeperience Inputs and Outputs:
+
+- Inputs: Designing a simulation is mostly setting parameters (here through excel files),
+- Outputs: One of the expected result output for the user is graphical: here, a curve showing concentration over time,
 
 **Questions**:
 
@@ -106,7 +109,7 @@ After installing [`OSPSuite-Full.11.0.139.exe`](https://github.com/Open-Systems-
 ## What are the results of the simulation ?
 
 ```{r}
-simulatedScenarios$TestScenario
+str(simulatedScenarios$TestScenario)
 ```
 The output of the simulation contains:
 

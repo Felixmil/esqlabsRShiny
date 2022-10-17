@@ -14,6 +14,8 @@ website:
         href: proposals.qmd
       - text: "Roadmap"
         href: roadmap.qmd
+      - text: "Design"
+        href: design.qmd
       # - sidebar:review
       # - sidebar:proposals
       # - sidebar:roadmap
@@ -47,7 +49,7 @@ execute:
 
 format:
   html:
-    theme: sandstone
+    theme: yeti
     css: styles.css
     toc: true
 

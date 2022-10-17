@@ -2,3 +2,48 @@
 title: "Roadmap"
 ---
 
+
+The [proposals](proposals.qmd) made in this study can be independent and incremental. Thus a general roadmap can be proposed to improve the esqlabs usage over time.
+
+## Short term
+
+These actions can be performed quickly after the beginning of the project. They do not require to break or change things that already exist, instead they can be added on top of the current package architecture.
+
+1. Improve the Excel files framework
+2. Automate reporting using Rmarkdown
+
+required resources:
+
+  - learning time (domain, package structure and functions)
+  - dev time
+  - user feedback time
+
+
+## Middle term
+
+These actions will require more dev time s
+
+1. Create a shinyApp for simulation settings inputs and implement a database based configuration system,
+2. Integrate a live preview of simulation settings and results
+3. Integrate report rendering in the shinyApp
+
+
+required resources:
+
+  - dev time
+  - user test/feedback time
+
+
+## Long term
+
+1. Setup a shared database for simulation parameters which can be queried from shinyapp,
+2. Setup a CRUD interface in the shinyApp to maintain the parameters database,
+3. Install and setup a shiny server with secured environments and dependencies,
+4. Host others esqlabsR shiny app on this server
+
+required resources:
+  
+  - database setup and management time,
+  - server rent,
+  - setup/configuration time,
+  - dev time.

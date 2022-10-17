@@ -6,13 +6,13 @@ sidebar: false
 
 # Summary
 This study was carried in the context of a recruitment process at esqLABS. 
-The goal is to make a design proposal that should make the use of the [{esqlabR}](https://github.com/esqLABS/esqlabsR) package easier and streamlined.
-the esqlabR packages allow its user to model and simulate many drug effect and properties based on user's define scenarios.
-These scenarios are parameterized through pre-formated excel files.
 
-# Introduction
+The [{esqlabR}](https://github.com/esqLABS/esqlabsR) package allow its user to model and simulate many drug effect and properties based on user's define scenarios. The company want to improve the package usage by interfacing it with a Shiny App.
 
-## "Customer" Inputs
+This set working documents is a design proposal to reach this goal.
+ 
+
+# Inputs
 
 > We are developing an R package (esqlabsR,[https://github.com/esqLABS/esqlabsR](https://github.com/esqLABS/esqlabsR)) that facilitates our modeling and simulation activities. The package provides a workflow for setting up different simulation scenarios in excel files, which is described in an article from the package documentation: [https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html](https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html). 
 >
@@ -21,41 +21,46 @@ These scenarios are parameterized through pre-formated excel files.
 >We do not expect any code, but rather how you would design such an app, what features would you implement, how do you think this workflow can be improved. The package repository provides an exemplary modeling&simulation project folder ([https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject](https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject)) with all files required to execute examples from the article.
 
 
-## Goals
+<!-- ## Goals -->
 
-Based on Customer Inputs, the proposals made at the end of this study should answer these questions:
+<!-- Based on Customer Inputs, the proposals made at the end of this study should answer these questions: -->
 
-- What are the features an app should contain to facilitate the use of the esqlabsR package ?
-- What is the User Experience the app should be designed around ?
-- What is the User Interface the app should have in order to guide the User Experience ?
-- How the esqlabsR can be improved for easier use with or withou an application.
-- How to improve current workflow for using esqlabsR ?
+<!-- - What are the features an app should contain to facilitate the use of the esqlabsR package ? -->
+<!-- - What is the User Experience the app should be designed around ? -->
+<!-- - What is the User Interface the app should have in order to guide the User Experience ? -->
+<!-- - How the esqlabsR can be improved for easier use with or withou an application. -->
+<!-- - How to improve current workflow for using esqlabsR ? -->
 
 # Method
 
-## Package Test
-First, the package will be tested with a user point of view. Accordingly, the following aspects will be tested:
+First, the package was reviewed with a **user point of view**. Accordingly, the following aspects were tested:
 
-- Package installation,
-- Package usage,
+  - Package installation,
+  - Package usage,
+  - Model settings system,
+  - Visualization and reporting features.
+  
+Then, the strengths and limitations were listed in order to identify improvements axis.
 
-## Package Review
-Based on this experience, an in depth analysis will be carried out on:
-- user experience,
-- data model
+Based on these axis, a set of proposals was made including a shinyapp design but also other features.
 
+These features was organized around an incremental and flexible roadmap detailed on 3 time frames. 
 
-# Results
-
-As result, many proposals could be made on the following aspects:
-
-- Inputs verification and storage,
-- User Experience and Interface,
-- Output
-- Infrastructure and Environment
+Finally a vision of the "final" shinyApp design and architecture was sketched using excalidraw.
 
 
-These proposals were ordered on a roadmap that aims to reach the goals by implementing these proposals in an incremental and flexible way.
+
+<!-- # Results -->
+
+<!-- As result, many proposals could be made on the following aspects: -->
+
+<!-- - Inputs verification and storage, -->
+<!-- - User Experience and Interface, -->
+<!-- - Output -->
+<!-- - Infrastructure and Environment -->
+
+
+<!-- These proposals were ordered on a roadmap that aims to reach the goals by implementing these proposals in an incremental and flexible way. -->
 
 
 

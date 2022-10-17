@@ -4,8 +4,8 @@ sidebar: false
 ---
 
 
-Here are the proposals to solve the weaknesses identified and improve the overhaul quality of the work done with the esqlabs package.
-In the end all these proposal aims to **reduce frictions** (thus **increase productivity**) and **increase quality** (and **customer satisfaction**).
+Here are the proposals to solve the weaknesses identified and improve the overhaul quality of the work done with the esqlabsR package.
+All these features aim to **enhance productivity** and **increase quality**.
 
 ## Improve the Excel Files Framework
 
@@ -16,17 +16,19 @@ The excel base framework could be improved drastically with few minor changes:
 - Work with data keys/values instead of plain text 
 
 
-
 ## Secure and ease the parameterizing process using a shiny app
 
 A simple yet modern "tab" based shiny app can drastically reduce input errors and improve user experience:
 
-- Pre filled fields and SelectInputs
-- Data cross validation
-- Field validation
-- Simulation settings summary dashboard
+- Pre filled fields and SelectInputs,
+- Data cross validation,
+- Field validation,
+- Simulation settings summary dashboard,
+- Built around local sql database.
 
 I would use the [`bs4Dash`](https://github.com/RinteRface/bs4Dash) package for all the UI: easy to use, modern, well supported and extensible.
+
+
 
 ## Improve and automate reporting with Rmarkdown
 
@@ -34,12 +36,18 @@ Rmarkdown files [can take parameters as inputs](https://rmarkdown.rstudio.com/le
 
 **One** well designed Rmarkdown template could be sufficient to generate all kind of reports, personnalized base on settings the user chose.
 
+
+## Add a live preview of simulation settings and results
+
+Before exporting the simulation results, the user should have a live preview of the result. This would allow him to quickly iterate to find the appropriate model and configuration.
+
+
 ## Setup a shared/user sql database for parameters
 
 If some values are often duplicated across esqlabs users environments: A central database gathering all the "typical" simulation settings can improve repeatability and increase collaboration between users.
 
 
-## Streamline the whole process by integrating all these in a server hoster shiny app
+## Streamline the whole process by integrating all these in a server hosted shiny app
 
 The future esqlabsR shiny could integrate both:
 

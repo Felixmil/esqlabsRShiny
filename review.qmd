@@ -4,6 +4,7 @@ execute:
   warning: false
 ---
 
+## Scope
 The following aspects were reviewed:
 
 - Package installation
@@ -12,5 +13,38 @@ The following aspects were reviewed:
 - Visualization & Reporting
 
 
-Package and dependencies were **successfully installed** even though the process required heterogeneous approaches and there are some "holes" in the documentation.
-The "Standard Worklow" was successfully run
+
+## Strengths
+
+- The package make simulation really easy and understandable,
+- The user experience is designed around domain knowledge,
+- The simulation parameters are easy to read once set,
+- The visualization wrapper allow customization
+
+## Limitations
+
+- Many things can go wrong during installation and fragile dependency network,
+- Easy to use, hard to customize,
+- Error-prone configuration workflow,
+- Lack of output formatting and automation.
+
+## Improvement axis
+
+The identified limitations have impacts on **user experience** and **quality** which are directly linked to **productivity** and **customer satisfaction**. 
+
+### User experience can be increased by:
+
+  - Anticipating user inputs,
+  - Preventing and reducing errors,
+  - Accelerating user iterations,
+  - Automating steps,
+  - Reduce frictions,
+  - Enhancing user collaboration,
+
+### Quality can be increased by:
+
+  - Standardizing outputs,
+  - Increase outputs level of details,
+  - Improve repeatability and reproducibility of outputs,
+  - Securing execution environment and dependencies.
+

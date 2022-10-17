@@ -13,9 +13,15 @@ execute:
 
 While the plot are probably the most effective way to output simulation results, there should be more context and details available.
 
-In fact there is no real "reporting", except if the user digs into the R object structure.
+It appears that there is no real "reporting", except if the user digs into the R object structure.
 
 
+
+**Questions:**
+
+- What are the deliverable that are given to the customer ?
+- How are reported all the results contains in the simulation object ?
+- Do user write a lot of text for reporting to customer ?
 :::
 
 This is a run of the [visualisation workflow](https://esqlabs.github.io/esqlabsR/articles/visualization-and-reporting.html)

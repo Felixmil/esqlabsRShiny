@@ -85,6 +85,12 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./proposals.html">Proposals</a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./roadmap.html">Roadmap</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./design.html">Design</a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -101,17 +107,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#customer-inputs" id="toc-customer-inputs" class="nav-link" data-scroll-target="#customer-inputs">“Customer” Inputs</a></li>
-  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
-  </ul></li>
-  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method">Method</a>
-  <ul class="collapse">
-  <li><a href="#package-test" id="toc-package-test" class="nav-link" data-scroll-target="#package-test">Package Test</a></li>
-  <li><a href="#package-review" id="toc-package-review" class="nav-link" data-scroll-target="#package-review">Package Review</a></li>
-  </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#inputs" id="toc-inputs" class="nav-link" data-scroll-target="#inputs">Inputs</a></li>
+  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method">Method</a></li>
   </ul>
 </nav>
     </div>
@@ -122,55 +119,45 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level1">
 <h1>Summary</h1>
-<p>This study was carried in the context of a recruitment process at esqLABS. The goal is to make a design proposal that should make the use of the <a href="https://github.com/esqLABS/esqlabsR">{esqlabR}</a> package easier and streamlined. the esqlabR packages allow its user to model and simulate many drug effect and properties based on user’s define scenarios. These scenarios are parameterized through pre-formated excel files.</p>
+<p>This study was carried in the context of a recruitment process at esqLABS.</p>
+<p>The <a href="https://github.com/esqLABS/esqlabsR">{esqlabR}</a> package allow its user to model and simulate many drug effect and properties based on user’s define scenarios. The company want to improve the package usage by interfacing it with a Shiny App.</p>
+<p>This set working documents is a design proposal to reach this goal.</p>
 </section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<section id="customer-inputs" class="level2">
-<h2 class="anchored" data-anchor-id="customer-inputs">“Customer” Inputs</h2>
+<section id="inputs" class="level1">
+<h1>Inputs</h1>
 <blockquote class="blockquote">
 <p>We are developing an R package (esqlabsR,<a href="https://github.com/esqLABS/esqlabsR">https://github.com/esqLABS/esqlabsR</a>) that facilitates our modeling and simulation activities. The package provides a workflow for setting up different simulation scenarios in excel files, which is described in an article from the package documentation: <a href="https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html">https://esqlabs.github.io/esqlabsR/articles/standard-workflow.html</a>.</p>
 <p>We would be happy to discuss a design proposal for an app that could facilitate setting up such simulation scenarios and make it less error prone. Feel free to make any proposals of how this workflow can be improved. I understand that you might not have the required background experience with our type of work or the respective packages, so feel free to set up a list of questions that you as an app designer require to have answered to implement such an app.</p>
 <p>We do not expect any code, but rather how you would design such an app, what features would you implement, how do you think this workflow can be improved. The package repository provides an exemplary modeling&amp;simulation project folder (<a href="https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject">https://github.com/esqLABS/esqlabsR/tree/develop/tests/data/TestProject</a>) with all files required to execute examples from the article.</p>
 </blockquote>
-</section>
-<section id="goals" class="level2">
-<h2 class="anchored" data-anchor-id="goals">Goals</h2>
-<p>Based on Customer Inputs, the proposals made at the end of this study should answer these questions:</p>
-<ul>
-<li>What are the features an app should contain to facilitate the use of the esqlabsR package ?</li>
-<li>What is the User Experience the app should be designed around ?</li>
-<li>What is the User Interface the app should have in order to guide the User Experience ?</li>
-<li>How the esqlabsR can be improved for easier use with or withou an application.</li>
-<li>How to improve current workflow for using esqlabsR ?</li>
-</ul>
-</section>
+<!-- ## Goals -->
+<!-- Based on Customer Inputs, the proposals made at the end of this study should answer these questions: -->
+<!-- - What are the features an app should contain to facilitate the use of the esqlabsR package ? -->
+<!-- - What is the User Experience the app should be designed around ? -->
+<!-- - What is the User Interface the app should have in order to guide the User Experience ? -->
+<!-- - How the esqlabsR can be improved for easier use with or withou an application. -->
+<!-- - How to improve current workflow for using esqlabsR ? -->
 </section>
 <section id="method" class="level1">
 <h1>Method</h1>
-<section id="package-test" class="level2">
-<h2 class="anchored" data-anchor-id="package-test">Package Test</h2>
-<p>First, the package will be tested with a user point of view. Accordingly, the following aspects will be tested:</p>
+<p>First, the package was reviewed with a <strong>user point of view</strong>. Accordingly, the following aspects were tested:</p>
 <ul>
 <li>Package installation,</li>
 <li>Package usage,</li>
+<li>Model settings system,</li>
+<li>Visualization and reporting features.</li>
 </ul>
-</section>
-<section id="package-review" class="level2">
-<h2 class="anchored" data-anchor-id="package-review">Package Review</h2>
-<p>Based on this experience, an in depth analysis will be carried out on: - user experience, - data model</p>
-</section>
-</section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<p>As result, many proposals could be made on the following aspects:</p>
-<ul>
-<li>Inputs verification and storage,</li>
-<li>User Experience and Interface,</li>
-<li>Output</li>
-<li>Infrastructure and Environment</li>
-</ul>
-<p>These proposals were ordered on a roadmap that aims to reach the goals by implementing these proposals in an incremental and flexible way.</p>
+<p>Then, the strengths and limitations were listed in order to identify improvements axis.</p>
+<p>Based on these axis, a set of proposals was made including a shinyapp design but also other features.</p>
+<p>These features was organized around an incremental and flexible roadmap detailed on 3 time frames.</p>
+<p>Finally a vision of the “final” shinyApp design and architecture was sketched using excalidraw.</p>
+<!-- # Results -->
+<!-- As result, many proposals could be made on the following aspects: -->
+<!-- - Inputs verification and storage, -->
+<!-- - User Experience and Interface, -->
+<!-- - Output -->
+<!-- - Infrastructure and Environment -->
+<!-- These proposals were ordered on a roadmap that aims to reach the goals by implementing these proposals in an incremental and flexible way. -->
 
 
 </section>

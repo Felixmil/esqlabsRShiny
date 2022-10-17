@@ -126,7 +126,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -142,62 +142,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-package-test" role="button" data-bs-toggle="dropdown" aria-expanded="false">Package Test</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-package-test">    
-        <li>
-    <a class="dropdown-item" href="./test.html">
- <span class="dropdown-text">Package Test</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./test_install.html">
- <span class="dropdown-text">Installation Test</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./test_use.html">
- <span class="dropdown-text">Use Test</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-review" role="button" data-bs-toggle="dropdown" aria-expanded="false">Review</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-review">    
-        <li>
-    <a class="dropdown-item" href="./review.html">
- <span class="dropdown-text">Review</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-proposals" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proposals</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-proposals">    
-        <li>
-    <a class="dropdown-item" href="./proposals.html">
- <span class="dropdown-text">Proposals</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-roadmap" role="button" data-bs-toggle="dropdown" aria-expanded="false">Roadmap</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-roadmap">    
-        <li>
-    <a class="dropdown-item" href="./roadmap.html">
- <span class="dropdown-text">Roadmap</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">About</a>
+    <a class="nav-link active" href="./review.html" aria-current="page">Package Review</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposals.html">Proposals</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./roadmap.html">Roadmap</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./design.html">Design</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">About</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./review.html" class="sidebar-item-text sidebar-link">Review Summary</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_install.html" class="sidebar-item-text sidebar-link">Installation</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_use.html" class="sidebar-item-text sidebar-link">User Experience</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_data.html" class="sidebar-item-text sidebar-link">Model Settings</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_visualize.html" class="sidebar-item-text sidebar-link">Vis’ &amp; Reporting</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -207,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title d-none d-lg-block">About</h1>
 </div>
 
 

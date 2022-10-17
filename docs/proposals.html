@@ -88,6 +88,9 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./roadmap.html">Roadmap</a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./design.html">Design</a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -106,8 +109,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#improve-the-excel-files-framework" id="toc-improve-the-excel-files-framework" class="nav-link active" data-scroll-target="#improve-the-excel-files-framework">Improve the Excel Files Framework</a></li>
   <li><a href="#secure-and-ease-the-parameterizing-process-using-a-shiny-app" id="toc-secure-and-ease-the-parameterizing-process-using-a-shiny-app" class="nav-link" data-scroll-target="#secure-and-ease-the-parameterizing-process-using-a-shiny-app">Secure and ease the parameterizing process using a shiny app</a></li>
   <li><a href="#improve-and-automate-reporting-with-rmarkdown" id="toc-improve-and-automate-reporting-with-rmarkdown" class="nav-link" data-scroll-target="#improve-and-automate-reporting-with-rmarkdown">Improve and automate reporting with Rmarkdown</a></li>
+  <li><a href="#add-a-live-preview-of-simulation-settings-and-results" id="toc-add-a-live-preview-of-simulation-settings-and-results" class="nav-link" data-scroll-target="#add-a-live-preview-of-simulation-settings-and-results">Add a live preview of simulation settings and results</a></li>
   <li><a href="#setup-a-shareduser-sql-database-for-parameters" id="toc-setup-a-shareduser-sql-database-for-parameters" class="nav-link" data-scroll-target="#setup-a-shareduser-sql-database-for-parameters">Setup a shared/user sql database for parameters</a></li>
-  <li><a href="#streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app" id="toc-streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app" class="nav-link" data-scroll-target="#streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app">Streamline the whole process by integrating all these in a server hoster shiny app</a></li>
+  <li><a href="#streamline-the-whole-process-by-integrating-all-these-in-a-server-hosted-shiny-app" id="toc-streamline-the-whole-process-by-integrating-all-these-in-a-server-hosted-shiny-app" class="nav-link" data-scroll-target="#streamline-the-whole-process-by-integrating-all-these-in-a-server-hosted-shiny-app">Streamline the whole process by integrating all these in a server hosted shiny app</a></li>
   <li><a href="#secure-a-production-grade-environment-with-a-centralized-server" id="toc-secure-a-production-grade-environment-with-a-centralized-server" class="nav-link" data-scroll-target="#secure-a-production-grade-environment-with-a-centralized-server">Secure a production-grade environment with a centralized server</a></li>
   <li><a href="#bonus-host-already-existing-esqlabs-shinyapps-on-a-server" id="toc-bonus-host-already-existing-esqlabs-shinyapps-on-a-server" class="nav-link" data-scroll-target="#bonus-host-already-existing-esqlabs-shinyapps-on-a-server">Bonus: host already existing esqlabs shinyapps on a server</a></li>
   </ul>
@@ -132,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Here are the proposals to solve the weaknesses identified and improve the overhaul quality of the work done with the esqlabs package. In the end all these proposal aims to <strong>reduce frictions</strong> (thus <strong>increase productivity</strong>) and <strong>increase quality</strong> (and <strong>customer satisfaction</strong>).</p>
+<p>Here are the proposals to solve the weaknesses identified and improve the overhaul quality of the work done with the esqlabsR package. All these features aim to <strong>enhance productivity</strong> and <strong>increase quality</strong>.</p>
 <section id="improve-the-excel-files-framework" class="level2">
 <h2 class="anchored" data-anchor-id="improve-the-excel-files-framework">Improve the Excel Files Framework</h2>
 <p>The excel base framework could be improved drastically with few minor changes:</p>
@@ -146,10 +150,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="secure-and-ease-the-parameterizing-process-using-a-shiny-app">Secure and ease the parameterizing process using a shiny app</h2>
 <p>A simple yet modern “tab” based shiny app can drastically reduce input errors and improve user experience:</p>
 <ul>
-<li>Pre filled fields and SelectInputs</li>
-<li>Data cross validation</li>
-<li>Field validation</li>
-<li>Simulation settings summary dashboard</li>
+<li>Pre filled fields and SelectInputs,</li>
+<li>Data cross validation,</li>
+<li>Field validation,</li>
+<li>Simulation settings summary dashboard,</li>
+<li>Built around local sql database.</li>
 </ul>
 <p>I would use the <a href="https://github.com/RinteRface/bs4Dash"><code>bs4Dash</code></a> package for all the UI: easy to use, modern, well supported and extensible.</p>
 </section>
@@ -158,12 +163,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Rmarkdown files <a href="https://rmarkdown.rstudio.com/lesson-6.html">can take parameters as inputs</a> and execute code based on these parameters.</p>
 <p><strong>One</strong> well designed Rmarkdown template could be sufficient to generate all kind of reports, personnalized base on settings the user chose.</p>
 </section>
+<section id="add-a-live-preview-of-simulation-settings-and-results" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-live-preview-of-simulation-settings-and-results">Add a live preview of simulation settings and results</h2>
+<p>Before exporting the simulation results, the user should have a live preview of the result. This would allow him to quickly iterate to find the appropriate model and configuration.</p>
+</section>
 <section id="setup-a-shareduser-sql-database-for-parameters" class="level2">
 <h2 class="anchored" data-anchor-id="setup-a-shareduser-sql-database-for-parameters">Setup a shared/user sql database for parameters</h2>
 <p>If some values are often duplicated across esqlabs users environments: A central database gathering all the “typical” simulation settings can improve repeatability and increase collaboration between users.</p>
 </section>
-<section id="streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app" class="level2">
-<h2 class="anchored" data-anchor-id="streamline-the-whole-process-by-integrating-all-these-in-a-server-hoster-shiny-app">Streamline the whole process by integrating all these in a server hoster shiny app</h2>
+<section id="streamline-the-whole-process-by-integrating-all-these-in-a-server-hosted-shiny-app" class="level2">
+<h2 class="anchored" data-anchor-id="streamline-the-whole-process-by-integrating-all-these-in-a-server-hosted-shiny-app">Streamline the whole process by integrating all these in a server hosted shiny app</h2>
 <p>The future esqlabsR shiny could integrate both:</p>
 <ul>
 <li>Parameterizing process,</li>

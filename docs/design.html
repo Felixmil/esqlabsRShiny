@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>esqLABSRShiny - Review</title>
+<title>esqLABSRShiny - Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,54 +79,18 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-package-test" role="button" data-bs-toggle="dropdown" aria-expanded="false">Package Test</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-package-test">    
-        <li>
-    <a class="dropdown-item" href="./test.html">
- <span class="dropdown-text">Review</span></a>
+  <li class="nav-item">
+    <a class="nav-link active" href="./review.html" aria-current="page">Package Review</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_install.html">
- <span class="dropdown-text">Installation Test</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./proposals.html">Proposals</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_use.html">
- <span class="dropdown-text">Use Test</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./roadmap.html">Roadmap</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_data.html">
- <span class="dropdown-text">Data Model Exploration</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./design.html">Design</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_visualize.html">
- <span class="dropdown-text">Visualization Test</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-review" role="button" data-bs-toggle="dropdown" aria-expanded="false">Review</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-review">    
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-proposals" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proposals</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-proposals">    
-        <li>
-    <a class="dropdown-item" href="./proposals.html">
- <span class="dropdown-text">Proposals</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-roadmap" role="button" data-bs-toggle="dropdown" aria-expanded="false">Roadmap</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-roadmap">    
-        <li>
-    <a class="dropdown-item" href="./roadmap.html">
- <span class="dropdown-text">Roadmap</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -134,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Review</h1>
+      <h1 class="quarto-secondary-nav-title">Design</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -149,27 +113,27 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test.html" class="sidebar-item-text sidebar-link active">Review</a>
+  <a href="./review.html" class="sidebar-item-text sidebar-link">Review Summary</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test_install.html" class="sidebar-item-text sidebar-link">Installation Test</a>
+  <a href="./test_install.html" class="sidebar-item-text sidebar-link">Installation</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test_use.html" class="sidebar-item-text sidebar-link">Use Test</a>
+  <a href="./test_use.html" class="sidebar-item-text sidebar-link">User Experience</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test_data.html" class="sidebar-item-text sidebar-link">Data Model Exploration</a>
+  <a href="./test_data.html" class="sidebar-item-text sidebar-link">Model Settings</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test_visualize.html" class="sidebar-item-text sidebar-link">Visualization Test</a>
+  <a href="./test_visualize.html" class="sidebar-item-text sidebar-link">Vis’ &amp; Reporting</a>
   </div>
 </li>
     </ul>
@@ -177,14 +141,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#base-layout" id="toc-base-layout" class="nav-link active" data-scroll-target="#base-layout">Base layout</a></li>
+  <li><a href="#simulation-run" id="toc-simulation-run" class="nav-link" data-scroll-target="#simulation-run">Simulation Run</a></li>
+  <li><a href="#parameters-databases" id="toc-parameters-databases" class="nav-link" data-scroll-target="#parameters-databases">Parameters databases</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Review</h1>
+<h1 class="title d-none d-lg-block">Design</h1>
 </div>
 
 
@@ -198,16 +170,20 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The following aspects were tested:</p>
-<ul>
-<li>Package installation</li>
-<li>Execution</li>
-<li>Visualization</li>
-<li>Creation of a custom simulation</li>
-</ul>
-<p>Package and dependencies were <strong>successfully installed</strong> even though the process required heterogeneous approaches and there are some “holes” in the documentation. The “Standard Worklow” was successfully run</p>
+<section id="base-layout" class="level2">
+<h2 class="anchored" data-anchor-id="base-layout">Base layout</h2>
+<p><img src="base_layout.png" class="img-fluid"></p>
+</section>
+<section id="simulation-run" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-run">Simulation Run</h2>
+<p><img src="run_simulation.png" class="img-fluid"></p>
+</section>
+<section id="parameters-databases" class="level2">
+<h2 class="anchored" data-anchor-id="parameters-databases">Parameters databases</h2>
+<p><img src="parameters.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

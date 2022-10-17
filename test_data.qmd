@@ -19,8 +19,14 @@ The excel files are well structured but may be error prone:
 - There are a lot of plain text repetition in the files,
 - There is no crossed data validation between excel files (I can launch a simulation on `Indvi3` instead of `Indiv3`, the source of the problem can be long to find).
 - Each user have its own Excel files in its environment. As they can be hard to "merge", reproducibility is hard to achieve,
-- Excel files are badly versionned, thus are lowering the simulations repeatability over time.
+- Excel files can't be versionned properly, thus are lowering the simulations repeatability over time.
 
+
+**Questions**:
+
+- Do "input" errors occurs often ? Do users need to reconfigure excel files several times before running a simulation successfully ?
+- How the simulations are "shared" among users ? Through excel files ?
+- Did the Excel files include "forms" or "value validation" ?
 :::
 
 

@@ -79,36 +79,17 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-package-review" role="button" data-bs-toggle="dropdown" aria-expanded="false">Package Review</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-package-review">    
-        <li>
-    <a class="dropdown-item" href="./review.html">
- <span class="dropdown-text">Package Review</span></a>
+  <li class="nav-item">
+    <a class="nav-link active" href="./review.html" aria-current="page">Package Review</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_install.html">
- <span class="dropdown-text">Installation</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./test_use.html">
- <span class="dropdown-text">User Experience</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./test_data.html">
- <span class="dropdown-text">Model Settings</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./test_visualize.html">
- <span class="dropdown-text">Vis’ &amp; Reporting</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="./proposals.html">Proposals</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./roadmap.html">Roadmap</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./design.html">Design</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -132,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./review.html" class="sidebar-item-text sidebar-link">Package Review</a>
+  <a href="./review.html" class="sidebar-item-text sidebar-link">Review Summary</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -211,7 +192,13 @@ Model setting trough excel will lead to errors
 <li>There are a lot of plain text repetition in the files,</li>
 <li>There is no crossed data validation between excel files (I can launch a simulation on <code>Indvi3</code> instead of <code>Indiv3</code>, the source of the problem can be long to find).</li>
 <li>Each user have its own Excel files in its environment. As they can be hard to “merge”, reproducibility is hard to achieve,</li>
-<li>Excel files are badly versionned, thus are lowering the simulations repeatability over time.</li>
+<li>Excel files can’t be versionned properly, thus are lowering the simulations repeatability over time.</li>
+</ul>
+<p><strong>Questions</strong>:</p>
+<ul>
+<li>Do “input” errors occurs often ? Do users need to reconfigure excel files several times before running a simulation successfully ?</li>
+<li>How the simulations are “shared” among users ? Through excel files ?</li>
+<li>Did the Excel files include “forms” or “value validation” ?</li>
 </ul>
 </div>
 </div>

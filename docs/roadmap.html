@@ -79,49 +79,18 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-package-review" role="button" data-bs-toggle="dropdown" aria-expanded="false">Package Review</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-package-review">    
-        <li>
-    <a class="dropdown-item" href="./review.html">
- <span class="dropdown-text">Package Review</span></a>
+  <li class="nav-item">
+    <a class="nav-link active" href="./review.html" aria-current="page">Package Review</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_install.html">
- <span class="dropdown-text">Installation</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./proposals.html">Proposals</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_use.html">
- <span class="dropdown-text">User Experience</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./roadmap.html">Roadmap</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_data.html">
- <span class="dropdown-text">Model Settings</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./design.html">Design</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./test_visualize.html">
- <span class="dropdown-text">Vis’ &amp; Reporting</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-proposals" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proposals</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-proposals">    
-        <li>
-    <a class="dropdown-item" href="./proposals.html">
- <span class="dropdown-text">Proposals</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-roadmap" role="button" data-bs-toggle="dropdown" aria-expanded="false">Roadmap</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-roadmap">    
-        <li>
-    <a class="dropdown-item" href="./roadmap.html">
- <span class="dropdown-text">Roadmap</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -144,7 +113,27 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./roadmap.html" class="sidebar-item-text sidebar-link active">Roadmap</a>
+  <a href="./review.html" class="sidebar-item-text sidebar-link">Review Summary</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_install.html" class="sidebar-item-text sidebar-link">Installation</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_use.html" class="sidebar-item-text sidebar-link">User Experience</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_data.html" class="sidebar-item-text sidebar-link">Model Settings</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./test_visualize.html" class="sidebar-item-text sidebar-link">Vis’ &amp; Reporting</a>
   </div>
 </li>
     </ul>
@@ -152,7 +141,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#short-term" id="toc-short-term" class="nav-link active" data-scroll-target="#short-term">Short term</a></li>
+  <li><a href="#middle-term" id="toc-middle-term" class="nav-link" data-scroll-target="#middle-term">Middle term</a></li>
+  <li><a href="#long-term" id="toc-long-term" class="nav-link" data-scroll-target="#long-term">Long term</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -173,8 +170,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>The <a href="./proposals.html">proposals</a> made in this study can be independent and incremental. Thus a general roadmap can be proposed to improve the esqlabs usage over time.</p>
+<section id="short-term" class="level2">
+<h2 class="anchored" data-anchor-id="short-term">Short term</h2>
+<p>These actions can be performed quickly after the beginning of the project. They do not require to break or change things that already exist, instead they can be added on top of the current package architecture.</p>
+<ol type="1">
+<li>Improve the Excel files framework</li>
+<li>Automate reporting using Rmarkdown</li>
+</ol>
+<p>required resources:</p>
+<ul>
+<li>learning time (domain, package structure and functions)</li>
+<li>dev time</li>
+<li>user feedback time</li>
+</ul>
+</section>
+<section id="middle-term" class="level2">
+<h2 class="anchored" data-anchor-id="middle-term">Middle term</h2>
+<p>These actions will require more dev time s</p>
+<ol type="1">
+<li>Create a shinyApp for simulation settings inputs and implement a database based configuration system,</li>
+<li>Integrate a live preview of simulation settings and results</li>
+<li>Integrate report rendering in the shinyApp</li>
+</ol>
+<p>required resources:</p>
+<ul>
+<li>dev time</li>
+<li>user test/feedback time</li>
+</ul>
+</section>
+<section id="long-term" class="level2">
+<h2 class="anchored" data-anchor-id="long-term">Long term</h2>
+<ol type="1">
+<li>Setup a shared database for simulation parameters which can be queried from shinyapp,</li>
+<li>Setup a CRUD interface in the shinyApp to maintain the parameters database,</li>
+<li>Install and setup a shiny server with secured environments and dependencies,</li>
+<li>Host others esqlabsR shiny app on this server</li>
+</ol>
+<p>required resources:</p>
+<ul>
+<li>database setup and management time,</li>
+<li>server rent,</li>
+<li>setup/configuration time,</li>
+<li>dev time.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
